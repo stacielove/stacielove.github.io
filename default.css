@@ -24,7 +24,7 @@ li {
  }
 
 a:link {
-	color: #efefef;
+	color: #efefef;s
 	text-decoration: none;
 }
 
@@ -68,8 +68,8 @@ h1 span {
 	color: white;
 	font: bold 24px;
 	letter-spacing: -1;
-	/*background: rgb(0,0,0);
-	background: rgba(0,0,0,0.7);*/
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,0.7);
 	padding: 10;
 }
 
