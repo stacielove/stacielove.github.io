@@ -1,2 +1,2 @@
 # stacielove.github.io
-My DBC Phase 0 github pages site!
+Updated personal portfolio for stacielove.github.io
