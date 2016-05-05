@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700);
+
 html {
   width: 100%;
   height: 100%;
@@ -7,14 +9,15 @@ body {
   width: 100%;
   height: 100%;
   color: #fff;
-  background-color: black;
+  background-color: #69606b;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Raleway", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-/*Fixes extra vertical space from bootstrap the row*/
-.row {
-  padding-right: 0px;
-  margin-right: 0px;
-}
+/*Intro Title Section*/
 
 .intro {
   display: table;
@@ -30,13 +33,22 @@ body {
   background-size: cover;
 }
 
+.intro::before {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(79,77,77,0.44);
+}
+
+.intro::before, .intro::after {
+  content:'';
+  position:absolute;
+  z-index: 0;
+}
+
 .intro-body {
   display: table-cell;
   vertical-align: middle;
-}
-
-.page-heading {
-  font-size:40px;
+  z-index: 1;
 }
 
 .intro-text {
@@ -51,3 +63,5 @@ p {
 
 /*Button "Scroll Down" - maybe look at changing this? to content panels?? */
 
+
+/**/
