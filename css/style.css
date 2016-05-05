@@ -1,3 +1,53 @@
-body {
-  padding-top: 50px;
+html {
+  width: 100%;
+  height: 100%;
 }
+
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: black;
+}
+
+/*Fixes extra vertical space from bootstrap the row*/
+.row {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.intro {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  /*background: url("../img/bg-lrg.jpg") no-repeat center center fixed;*/
+  background: url("../img/bg-lrg_3.jpg") no-repeat top center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-heading {
+  font-size:40px;
+}
+
+.intro-text {
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height:1.6em;
+}
+
+/*Button "Scroll Down" - maybe look at changing this? to content panels?? */
+
