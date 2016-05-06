@@ -51,6 +51,14 @@ body {
   z-index: 1;
 }
 
+.intro-body h1 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 4.5em;
+  margin: 0 auto;
+  padding: 0 0 0.2em;
+}
+
 .intro-text {
   font-size: 18px;
 }
@@ -63,5 +71,17 @@ p {
 
 /*Button "Scroll Down" - maybe look at changing this? to content panels?? */
 
+button {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  margin-left: -0.3em;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 3em;
+}
 
 /**/
