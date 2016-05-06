@@ -69,7 +69,7 @@ p {
   line-height:1.6em;
 }
 
-/*Button "Scroll Down" - maybe look at changing this? to content panels?? */
+/* "Scroll Down" Button - Idea 1 */
 
 button {
   position: fixed;
@@ -82,6 +82,7 @@ button {
   border: none;
   background: transparent;
   font-size: 3em;
+  content: 'view more';
 }
 
-/**/
+/* Bouncing Panels ? - Idea 2 */
