@@ -15,6 +15,7 @@ body {
   line-height: 2;
   font-family: "Raleway", Arial, sans-serif;
   overflow-x: hidden;
+
 }
 
 /*Intro Title Section*/
@@ -54,19 +55,19 @@ body {
 .intro-body h1 {
   color: #fff;
   font-weight: 600;
-  font-size: 4.5em;
+  font-size: 4em;
   margin: 0 auto;
   padding: 0 0 0.2em;
+  letter-spacing: 0.05em;
 }
 
-.intro-text {
-  font-size: 18px;
-}
-
-p {
+.intro-body p {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 2em;
+  padding: 0 0 0.6em;
   margin: 0 0 25px;
-  font-size: 18px;
-  line-height:1.6em;
+  line-height:1.6;
 }
 
 /* "Scroll Down" Button - Idea 1 */
