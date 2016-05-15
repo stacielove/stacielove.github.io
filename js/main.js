@@ -1,6 +1,6 @@
 ! function() {
   $(".sub-title").typed({
-          strings: ["a Web Developer", "a Senior Systems Engineer", "a Senior Network Engineer", "an aspiring DevOps Engineer", "obsessed with cats"],
+          strings: ["a web developer.", "a systems engineer.", "a network engineer.", "an aspiring devops engineer."],
           typeSpeed: 1,
           backSpeed: 1,
           backDelay: 1400,

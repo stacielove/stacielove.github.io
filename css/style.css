@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700|Open+Sans:600|Montserrat:400,700|);
 
-html {
-  width: 100%;
+html, body, .portfolio-slide, .bg {
+  width:100%;
   height: 100%;
 }
 
@@ -9,81 +9,302 @@ body {
   width: 100%;
   height: 100%;
   color: #fff;
-  background-color: #69606b;
   font-weight: 500;
   font-size: 16px;
   line-height: 2;
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-
 }
 
-/*Intro Title Section*/
+/* BACKGROUND (PICTURE) */
+/*----------------*/
+/*.bg {*/
+  /*position: absolute;*/
+  /*margin: 0 auto;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+/*}*/
 
-.intro {
-  display: table;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #fff;
-  /*background: url("../img/bg-lrg.jpg") no-repeat center center fixed;*/
-  background: url("../img/bg-lrg_small.jpg") no-repeat top center scroll;
+/*RESPONSIVE Background Applied Here*/
+.bg-img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/bg-lrg_small.jpg") no-repeat left top scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.intro::before {
+.title {
+  z-index: 1000;
+  margin: 0 auto;
+  padding: 9em 1.25em;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.portfolio-wrapper .content .title h1 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 3.25em;
+  font-family: 'Playfair Display';
+  line-height: .2em;
+}
+.modify .content .title h1 {
+  color: #555;
+}
+
+.portfolio-wrapper .content .title h2 {
+  position: relative;
+  top: -.7em;
+  color: #fff;
+  font-family: 'Open Sans';
+}
+.modify .content .title h2 {
+  color: #555;
+}
+
+.title p {
+  color: #fff;
+  padding: 0 0 0.6em;
+  font-weight: 300;
+  font-size: 0.85em;
+  margin: 0 auto;
+}
+
+.title h1,
+.title p.subline {
+  line-height: 1;
+}
+
+.title p.subline {
+  font-size: 1.75em;
+}
+
+/* BUTTON - TRIGGER EVENT */
+/*----------------*/
+
+button.trigger {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  z-index: 5000;
+  display: block;
+  margin-left: -75px;
+  width: 150px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.portfolio-slide:not(.notrans) button.trigger {
+  -webkit-transition: opacity 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s;
+}
+
+.portfolio-slide.modify:not(.notrans) button.trigger {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+button.trigger:focus {
+  outline: none;
+}
+
+/* CONTENT Div */
+/*-------------*/
+
+.content {
+  margin: 0 auto;
+  padding: 0 0 3em;
+  z-index: 1;
+}
+
+.content > div:not(.title) {
+  margin: -80px auto 0;
+  max-width: 900px;
+  padding: 0 1.25em;
+}
+/*
+.content > div:not(.title) p {
+  margin: 0 auto 1.5em auto;
+}
+
+.content > div:not(.title) p:first-child {
+  font-size: 1.35em;
+}
+*/
+/*.content h3 {
+  margin: 0;
+  font-size: 1.4em;
+}*/
+/*
+.content blockquote {
+  padding: 0.25em;
+  font-style: italic;
+  font-size: 1.65em;
+  font-family: 'Lora', serif;
+  line-height: 1.4;
+}*/
+
+
+
+/* PORTFOLIO SLIDE-OUT */
+/*---------------------*/
+.portfolio-slide:not(.notrans) .bg-img::before {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.portfolio-slide:not(.notrans) .bg-img::after {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+}
+
+.portfolio-slide:not(.notrans) .title p {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.portfolio-slide:not(.notrans) .content > div {
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.portfolio-slide:not(.notrans) .bg-img::before,
+.portfolio-slide:not(.notrans) .bg-img::after,
+.portfolio-slide:not(.notrans) .title p,
+.portfolio-slide:not(.notrans) .content > div {
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.portfolio-slide .bg {
+  position: absolute;
+}
+
+.portfolio-slide .bg-img {
+  position: fixed;
+}
+
+.portfolio-slide .bg-img::before,
+.portfolio-slide .bg-img::after {
+  content: '';
+  position: absolute;
+  z-index: 100;
+}
+
+.portfolio-slide .bg-img::after {
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.portfolio-slide.modify .bg-img::after {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/*OPAQUE BG-OVERLAY*/
+/*------------------*/
+.portfolio-slide .bg-img::before {
   width: 100%;
   height: 100%;
   background-color: rgba(79,77,77,0.44);
 }
 
-.intro::before, .intro::after {
-  content:'';
-  position:absolute;
-  z-index: 0;
+.portfolio-slide.modify .bg-img::before {
+  background-color: rgba(40, 44, 47, 0.9);
 }
 
-.intro-body {
-  display: table-cell;
-  vertical-align: middle;
-  z-index: 1;
+.portfolio-slide a {
+  color: #f68f6c;
 }
 
-.intro-body h1 {
-  color: #fff;
-  font-weight: 600;
-  font-size: 4em;
-  margin: 0 auto;
-  padding: 0 0 0.2em;
-  letter-spacing: 0.05em;
-}
-
-.intro-body p {
-  color: #fff;
-  font-weight: lighter;
-  font-size: 2em;
-  padding: 0 0 0.6em;
-  margin: 0 0 25px;
-  line-height:1.6;
-}
-
-/* "Scroll Down" Button - Idea 1 */
-
-button {
+.portfolio-slide .title {
   position: fixed;
-  bottom: 0px;
-  left: 50%;
-  z-index: 1;
-  display: block;
-  margin-left: -0.3em;
-  padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 3em;
-  content: 'view more';
+  top: auto;
+  left: auto;
+  text-align: left;
+  -webkit-transform: translateY(200px);
+  transform: translateY(200px);
 }
 
-/* Bouncing Panels ? - Idea 2 */
+.portfolio-slide.modify .title {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.portfolio-slide .title h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  padding: 0 0 0.5em 0;
+  color: #585a66;
+}
+
+.portfolio-slide .title p {
+  opacity: 0;
+  color: #585a66;
+}
+
+.portfolio-slide.modify .title p {
+  opacity: 1;
+}
+
+.portfolio-slide .content {
+  width: 80%;
+  margin-left: 20%;
+  padding: 0 2.5em;
+}
+
+.portfolio-slide .content div {
+  position: relative;
+  margin: 70px 0;
+  color: #77726b;
+}
+
+.portfolio-slide .content div:nth-child(2) {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+  transform: translateY(200px);
+}
+
+.portfolio-slide.modify .content div:nth-child(2) {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* TRANSITION DELAYS */
+/*-------------------*/
+.portfolio-slide:not(.notrans) .title,
+.portfolio-slide:not(.notrans) .bg-img::before,
+.portfolio-slide:not(.notrans) .bg-img::after {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.portfolio-slide.modify:not(.notrans) .title,
+.portfolio-slide.modify:not(.notrans) .bg-img::before,
+.portfolio-slide.modify:not(.notrans) .bg-img::after {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.portfolio-slide.modify:not(.notrans) .content div:nth-child(2) {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
