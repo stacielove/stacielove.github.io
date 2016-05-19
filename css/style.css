@@ -308,19 +308,38 @@ body {
 ul.menu-click {
   position: relative;
   width: 100%;
+  overflow: hidden;
   padding-top: 20%;
   padding-right: 5%;
-  text-align: center;
 }
 
-.menu-click li {
+/*.menu-click li {
+  text-align: center;
   padding-bottom: 10px;
   padding-left: 30%;
   margin: 0;
+}*/
+
+.menu-click .sections {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-left: 30%;
+  margin: 0;
+  border-style: solid;
+  display: block;
+  text-transform: uppercase;
+  width:80%;
+  /*transform: translate3d(0px,0px,0px) !important;*/
+}
+
+.menu-click li a {
+  color:#fff;
 }
 
 
-.menu-click li a {
+/*.menu-click li a {
   font-weight: 400;
   border-style: solid;
   color: #fff;
@@ -331,7 +350,7 @@ ul.menu-click {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
+}*/
 
 .menu-click li a:hover {
   color: #ff3264;
