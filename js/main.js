@@ -10,15 +10,15 @@ $(document).ready(function() {
 // Function that adds "open" class to nav bar - utilizing staggerFromTo and staggerTo from Greensock
 // original: TweenMax.staggerFrom('.sections', 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 
-  $("#nav-icon").on('click',function(e) {
+  $("#nav-burger").on('click',function(e) {
         e.preventDefault();
 
         if ($(this).hasClass('open')){
             $(this).removeClass('open');
-            TweenMax.staggerTo('.sections', 0.5, {opacity:0, x:-20, ease:Back.easeIn}, 0.1);
+            TweenMax.staggerTo('.sections', 0.5, {opacity:0, x:-25, ease:Back.easeIn}, 0.1);
         } else {
             $(this).addClass('open'), $('#menu-overlay').addClass("menu-show");
-            TweenMax.staggerFromTo('.sections', 2, {opacity:0, x:-20},{opacity:1, x:+20, delay:0.5, ease:Elastic.easeOut, force3D:true},0.2);
+            TweenMax.staggerFromTo('.sections', 2, {opacity:0, x:-25},{opacity:1, x:+25, delay:0.5, ease:Elastic.easeOut, force3D:true},0.2);
     }                             
   });
 
@@ -28,8 +28,8 @@ $(document).ready(function() {
       e.preventDefault();
      
       if ($(window).scrollTop()==0){
-        $('#nav-icon').removeClass('open');
-        TweenMax.staggerTo('.sections', 0.25, {opacity:0, x:-20, ease:Back.easeIn}, 0.05);
+        $('#nav-burger').removeClass('open');
+        TweenMax.staggerTo('.sections', 0.25, {opacity:0, x:-25, ease:Back.easeIn}, 0.05);
       }
   });
 
