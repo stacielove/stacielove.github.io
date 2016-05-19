@@ -190,7 +190,7 @@ body {
 
 #nav-icon {
   top: 25px;
-  left: 23%;
+  right: 15px;
   width: 35px;
   height: 28px;
 }
@@ -313,31 +313,23 @@ ul.menu-click {
   padding-right: 5%;
 }
 
-/*.menu-click li {
-  text-align: center;
-  padding-bottom: 10px;
-  padding-left: 30%;
-  margin: 0;
-}*/
-
 .menu-click .sections {
   text-align: center;
   font-weight: 400;
   font-size: 20px;
   padding-bottom: 10px;
   padding-left: 30%;
-  margin: 0;
+  margin: 10px;
   border-style: solid;
   display: block;
   text-transform: uppercase;
   width:80%;
-  /*transform: translate3d(0px,0px,0px) !important;*/
 }
 
 .menu-click li a {
   color:#fff;
-}
 
+}
 
 /*.menu-click li a {
   font-weight: 400;
