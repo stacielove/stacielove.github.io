@@ -213,18 +213,14 @@ ul.menu-click {
 }
 
 .portfolio-wrapper .content .title h1 {
-  letter-spacing: 10px;
+  letter-spacing: 30px;
   color: #fff;
   font-weight: 800;
   font-size: 3.25em;
-  padding-left: 100px;
-  /*font-family: 'Playfair Display';*/
-  /*top: -.7em;*/
   font-family: 'Lato';
   line-height: .2em;
   text-transform: uppercase;
-  /*padding-top: .7em;*/
-  /*text-align: center;*/
+  padding-bottom: .5em;
 }
 .modify .content .title h1 {
   color: #555;
@@ -237,9 +233,7 @@ ul.menu-click {
   position: relative;
   padding-bottom:.7em;
   color: #fff;
-  /*font-family: 'Open Sans';*/
   font-family: 'Lato';
-  /*text-align: center;*/
   line-height: .2em;
 }
 .modify .content .title h2 {
@@ -261,13 +255,9 @@ ul.menu-click {
   margin: 0 auto;
 }
 
-.title h1,
 .title p.subline {
-  line-height: 1;
-}
-
-.title p.subline {
-  font-size: 1.75em;
+  font-size: 20px;
+  font-style: italic;
 }
 
 /* BUTTON - TRIGGER EVENT */
@@ -311,12 +301,19 @@ button.trigger:focus {
   padding: 0 0 3em;
   z-index: 1;
 }
+/*Overwriting Bootstrap container class*/
+.container {
+  margin-left: 0;
+  margin-right: 0;
+  width:90%;
+  padding: 50px 0;
+}
 
 /*Sets width and padding for divs in section*/
 .content > div:not(.title) {
-  margin: -80px auto 0;
+  /*margin: -80px auto 0;*/
   max-width: 100%;
-  padding: 0 1.25em;
+  /*padding: 0 1.25em;*/
 }
 
 /*
@@ -426,20 +423,18 @@ button.trigger:focus {
   top: auto;
   left: auto;
   text-align: left;
-  -webkit-transform: translateY(200px);
-  transform: translateY(200px);
+  -webkit-transform: translateY(300px);
+  transform: translateY(300px);
 }
 
 .portfolio-slide.modify .title {
-  -webkit-transform: translateY(-100px);
-  transform: translateY(-100px);
+  padding-bottom: 0;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 
-/*This was a test to make it move from the center to the LHS for alignment purposes? can I ease it? */
-.portfolio-slide.modify .title h1 {
-  -webkit-transform: translateX(-100px);
-  transform: translateX(-100px);
-    -webkit-transition: .25s ease-in-out;
+.portfolio-slide.modify .title h1, .portfolio-slide.modify .title h2 {
+  -webkit-transition: .25s ease-in-out;
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
@@ -448,17 +443,16 @@ button.trigger:focus {
 .portfolio-slide.modify .title h2 {
   -webkit-transform: translateX(-200px);
   transform: translateX(-200px);
-    -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
 }
 
-.portfolio-slide .title h1 {
-  font-family: 'Playfair Display', serif;
+.portfolio-slide.modify h3 {
+  font-size: 16px;
   font-weight: 700;
-  padding: 0 0 0.5em 0;
-  color: #585a66;
+  letter-spacing: 10px;
+  font-style: 'Libre Baskerville';
+  text-transform: uppercase;
+  /*opacity: 0;*/
+  /*color: #585a66;*/
 }
 
 .portfolio-slide .title p {
@@ -517,46 +511,32 @@ button.trigger:focus {
   transition-delay: 0.15s;
 }
 
+/*SECTION CSS*/
+/*-----------*/
+
+/*.about p {
+ font-style: 'Lora';
+}*/
+
 /*PROGRESS BARS*/
 /*-------------*/
 
-/*.prog-label {
-  background: #555555; 
-  border-radius: 5px 0 0 05px;
-  color: #fff;
-  border-right: 1px solid #FBF8FB;
-  float: left;
-  padding: 3px 6px;
-}*/
+.progress-label {
+  font-family: 'Lato';
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 
-.progress {
-    /*overflow: hidden;*/
+.progress {    
     height: 5px;
-    /*margin-top: 0;*/
-    /*margin-left: 0;*/
-    /*margin-right: 0;*/
-    /*margin-bottom: 0;*/
     background-color: #f5f5f5;
-    /*border-radius: 0;*/
-    /*-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);*/
-    /*box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);*/
 }
 
 .progress-bar {
-    /*float: left;*/
-    /*height: 100%;*/
-    /*font-size: 12px;*/
-    /*line-height: 20px;*/
     color: #ffffff;
-    /*text-align: center;*/
     background-color: #555;
-    /*-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);*/
-    /*box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);*/
-    /*-webkit-transition: width 0.6s ease;*/
-    /*-o-transition: width 0.6s ease;*/
-    /*transition: width 0.6s ease;*/
 }
-
 
 .dropdown-menu.pull-right {
     right: 0;
@@ -564,4 +544,3 @@ button.trigger:focus {
 }
 .pull-left{float:left}
 .pull-right{float:right}
-.media-name{margin:10px 20px 10px 0;}
