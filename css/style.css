@@ -10,9 +10,10 @@ body {
   height: 100%;
   color: #fff;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 2;
-  font-family: 'Raleway', Arial, sans-serif;
+  /*font-family: 'Raleway', Arial, sans-serif;*/
+  font-family: 'Libre Baskerville', serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -249,7 +250,7 @@ ul.menu-click {
 
 .title p {
   color: #fff;
-  padding: 0 0 0.6em;
+  /*padding: 0 0 0.6em;*/
   font-weight: 300;
   font-size: 0.85em;
   margin: 0 auto;
@@ -306,7 +307,8 @@ button.trigger:focus {
   margin-left: 0;
   margin-right: 0;
   width:90%;
-  padding: 50px 0;
+  padding: 50px 2.5em;
+ /*padding: 0 2.5em;*/
 }
 
 /*Sets width and padding for divs in section*/
@@ -428,7 +430,8 @@ button.trigger:focus {
 }
 
 .portfolio-slide.modify .title {
-  padding-bottom: 0;
+  padding: 0 0 2.5em 4em;
+  /*padding-bottom: 0;*/
   -webkit-transform: translateY(-50px);
   transform: translateY(-50px);
 }
@@ -445,15 +448,22 @@ button.trigger:focus {
   transform: translateX(-200px);
 }
 
-.portfolio-slide.modify h3 {
+.portfolio-slide h3 {
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 10px;
-  font-style: 'Libre Baskerville';
+  letter-spacing: 5px;
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   /*opacity: 0;*/
   /*color: #585a66;*/
 }
+/*
+.portfolio-slide h4 {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}*/
 
 .portfolio-slide .title p {
   opacity: 0;
@@ -467,7 +477,8 @@ button.trigger:focus {
 .portfolio-slide .content {
   width: 80%;
   margin-left: 20%;
-  padding: 0 2.5em;
+  /*This padding!!! */
+ /* padding: 0 2.5em;*/
 }
 
 .portfolio-slide .content div {
@@ -488,6 +499,14 @@ button.trigger:focus {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+
+#about {
+  padding-left: 4em;
+}
+
+#services .row {
+  padding: 4em 0;
 }
 
 /* TRANSITION DELAYS */
@@ -517,6 +536,11 @@ button.trigger:focus {
 /*.about p {
  font-style: 'Lora';
 }*/
+
+.portfolio-slide .content .bg-grey {
+  background-color: #efefef;
+  width: 100%;
+}
 
 /*PROGRESS BARS*/
 /*-------------*/
