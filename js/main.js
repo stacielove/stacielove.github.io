@@ -31,7 +31,19 @@ $(document).ready(function() {
         $('#nav-burger').removeClass('open');
         TweenMax.staggerTo('.sections', 0.25, {opacity:0, x:-25, ease:Back.easeIn}, 0.05);
       }
+
+// Progress bar fill animation 
+      // if($(window).scrollTop()>10) {
+      //   $(".progress-bar").each(function(){
+      //     each_bar_width = $(this).attr('aria-valuenow');
+      //     $(this).width(each_bar_width + '%');
+      //   });
+      // }
   });
+
+
+
+
 
 });
 

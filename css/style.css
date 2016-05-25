@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700|Open+Sans:600|Montserrat:400,700|);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700|Open+Sans:600|Montserrat:400,700|Lato:400,700,900|Libre+Baskerville:400,700,400italic|);
 
 html, body, .portfolio-slide, .bg {
   width:100%;
@@ -10,9 +10,10 @@ body {
   height: 100%;
   color: #fff;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 2;
-  font-family: 'Raleway', Arial, sans-serif;
+  /*font-family: 'Raleway', Arial, sans-serif;*/
+  font-family: 'Libre Baskerville', serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -213,41 +214,51 @@ ul.menu-click {
 }
 
 .portfolio-wrapper .content .title h1 {
+  letter-spacing: 30px;
   color: #fff;
   font-weight: 800;
   font-size: 3.25em;
-  font-family: 'Playfair Display';
+  font-family: 'Lato';
   line-height: .2em;
+  text-transform: uppercase;
+  padding-bottom: .5em;
 }
 .modify .content .title h1 {
   color: #555;
 }
 
 .portfolio-wrapper .content .title h2 {
+  padding-left: 200px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
   position: relative;
-  top: -.7em;
+  padding-bottom:.7em;
   color: #fff;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
+  line-height: .2em;
 }
 .modify .content .title h2 {
   color: #555;
 }
 
+.job-desc {
+  font-weight: 700;
+  /*padding-top: .1em;*/
+  /*top: -.7em;*/
+  /*text-align: center;*/
+}
+
 .title p {
   color: #fff;
-  padding: 0 0 0.6em;
+  /*padding: 0 0 0.6em;*/
   font-weight: 300;
   font-size: 0.85em;
   margin: 0 auto;
 }
 
-.title h1,
 .title p.subline {
-  line-height: 1;
-}
-
-.title p.subline {
-  font-size: 1.75em;
+  font-size: 20px;
+  font-style: italic;
 }
 
 /* BUTTON - TRIGGER EVENT */
@@ -291,12 +302,22 @@ button.trigger:focus {
   padding: 0 0 3em;
   z-index: 1;
 }
-
-.content > div:not(.title) {
-  margin: -80px auto 0;
-  max-width: 900px;
-  padding: 0 1.25em;
+/*Overwriting Bootstrap container class*/
+.container {
+  margin-left: 0;
+  margin-right: 0;
+  width:90%;
+  padding: 50px 2.5em;
+ /*padding: 0 2.5em;*/
 }
+
+/*Sets width and padding for divs in section*/
+.content > div:not(.title) {
+  /*margin: -80px auto 0;*/
+  max-width: 100%;
+  /*padding: 0 1.25em;*/
+}
+
 /*
 .content > div:not(.title) p {
   margin: 0 auto 1.5em auto;
@@ -404,21 +425,45 @@ button.trigger:focus {
   top: auto;
   left: auto;
   text-align: left;
-  -webkit-transform: translateY(200px);
-  transform: translateY(200px);
+  -webkit-transform: translateY(300px);
+  transform: translateY(300px);
 }
 
 .portfolio-slide.modify .title {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+  padding: 0 0 2.5em 4em;
+  /*padding-bottom: 0;*/
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 
-.portfolio-slide .title h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  padding: 0 0 0.5em 0;
-  color: #585a66;
+.portfolio-slide.modify .title h1, .portfolio-slide.modify .title h2 {
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
+
+.portfolio-slide.modify .title h2 {
+  -webkit-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+
+.portfolio-slide h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  /*opacity: 0;*/
+  /*color: #585a66;*/
+}
+/*
+.portfolio-slide h4 {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}*/
 
 .portfolio-slide .title p {
   opacity: 0;
@@ -432,25 +477,36 @@ button.trigger:focus {
 .portfolio-slide .content {
   width: 80%;
   margin-left: 20%;
-  padding: 0 2.5em;
+  /*This padding!!! */
+ /* padding: 0 2.5em;*/
 }
 
 .portfolio-slide .content div {
   position: relative;
-  margin: 70px 0;
+  /*Playing havoc with too many things? eg. skills?*/
+  /*margin: 10px 0;*/
+  /*width: 100%;*/
   color: #77726b;
 }
 
-.portfolio-slide .content div:nth-child(2) {
+.portfolio-slide .content div:nth-child(n+2) {
   opacity: 0;
   -webkit-transform: translateY(200px);
   transform: translateY(200px);
 }
 
-.portfolio-slide.modify .content div:nth-child(2) {
+.portfolio-slide.modify .content div:nth-child(-n+9) {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+
+#about {
+  padding-left: 4em;
+}
+
+#services .row {
+  padding: 3em 0;
 }
 
 /* TRANSITION DELAYS */
@@ -473,3 +529,46 @@ button.trigger:focus {
   -webkit-transition-delay: 0.15s;
   transition-delay: 0.15s;
 }
+
+/*SECTION CSS*/
+/*-----------*/
+
+/*.about p {
+ font-style: 'Lora';
+}*/
+
+.portfolio-slide .content .bg-grey {
+  background-color: #efefef;
+  width: 100%;
+}
+
+/*PROGRESS BARS*/
+/*-------------*/
+
+.progress-label {
+  font-family: 'Lato';
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.progress {    
+    height: 5px;
+    background-color: #f5f5f5;
+}
+
+.progress-bar {
+    color: #ffffff;
+    background-color: #555;
+}
+
+.dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+.pull-left{float:left}
+.pull-right{float:right}
+
+/*TIMELINE SECTION*/
+/*----------------*/
+
