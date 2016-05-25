@@ -506,7 +506,7 @@ button.trigger:focus {
 }
 
 #services .row {
-  padding: 4em 0;
+  padding: 3em 0;
 }
 
 /* TRANSITION DELAYS */
@@ -568,3 +568,7 @@ button.trigger:focus {
 }
 .pull-left{float:left}
 .pull-right{float:right}
+
+/*TIMELINE SECTION*/
+/*----------------*/
+
