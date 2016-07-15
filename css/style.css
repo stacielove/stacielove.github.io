@@ -592,7 +592,7 @@ button.trigger:focus {
 }*/
 
 #resume {
-    box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   background: #fff;
@@ -601,7 +601,7 @@ button.trigger:focus {
   /*margin:0;*/
   padding: 0;
   color: #6A6A6A;
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
   /*margin-left:20px;*/
 }
@@ -620,7 +620,7 @@ button.trigger:focus {
 
 #t-wrapper {
   width: 100%;
-  margin: 30px 30px auto 30px;
+  margin: 30px 30px 60px 30px;
   position: relative;
   padding: 0 10px;
   -webkit-transition: all 0.4s ease;
@@ -677,7 +677,7 @@ button.trigger:focus {
   width: 46%;
   background: #fff;
   padding: 20px 0px 20px 20px;
-/*  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+/*-webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);*/
@@ -686,7 +686,7 @@ button.trigger:focus {
   -moz-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   -ms-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-/*  -webkit-border-radius: 5px;
+/*-webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;*/
@@ -711,7 +711,7 @@ button.trigger:focus {
   border-radius: 3px 3px 0 0;
 }
 
-#t-wrapper .t-item .t-content h3 span.date {
+#t-wrapper .t-item .t-content h3 span {
   font-size: 10px;
   font-weight: 300;
 }
@@ -741,5 +741,6 @@ button.trigger:focus {
   border-left: 0;
   border-right: 8px solid #6A6A6A;
 }
+
 
 
