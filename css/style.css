@@ -551,6 +551,12 @@ button.trigger:focus {
   width: 100%;
 }
 
+.bg-dark-grey {
+  background: #555;
+  width: 100%;
+}
+
+
 /*PROGRESS BARS*/
 /*-------------*/
 
