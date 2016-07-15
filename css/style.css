@@ -537,8 +537,17 @@ button.trigger:focus {
  font-style: 'Lora';
 }*/
 
-.portfolio-slide .content .bg-grey {
+/*Background color variables for divs*/
+/*----------------------------------*/
+/*could make this into a feature?*/
+
+.bg-grey {
   background-color: #efefef;
+  width: 100%;
+}
+
+.bg-light-grey {
+  background-color: #f9f9f9;
   width: 100%;
 }
 
@@ -571,4 +580,167 @@ button.trigger:focus {
 
 /*TIMELINE SECTION*/
 /*----------------*/
+/*
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}*/
+
+/*html, body {
+  
+}*/
+
+#resume {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #fff;
+  /*background-size: cover;*/
+  /*font-family: 'Lato', sans-serif;*/
+  /*margin:0;*/
+  padding: 0;
+  color: #6A6A6A;
+  /*height: 100%;*/
+  width: 100%;
+  /*margin-left:20px;*/
+}
+
+#resume h2 {
+  margin-left: 40px; 
+}
+/*.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}*/
+
+
+/*Timeline*/
+/*--------*/
+
+#t-wrapper {
+  width: 100%;
+  margin: 30px 30px 60px 30px;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#t-wrapper:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #6A6A6A;
+  left: 50%;
+  top: 0;
+  position: absolute;
+}
+
+#t-wrapper:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+#t-wrapper .t-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#t-wrapper .t-item .t-icon {
+  background: #6A6A6A;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -23px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/*handles svg*/
+#t-wrapper .t-item .t-icon svg {
+  position: relative;
+  top:10px;
+  left:10px;
+}
+
+#t-wrapper .t-item .t-content {
+  width: 46%;
+  background: #fff;
+  padding: 20px 0px 20px 20px;
+/*-webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);*/
+  /*New box shadows?*/
+  -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+/*-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;*/
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#t-wrapper .t-item .t-content h3 {
+  /*padding: 15px 0px 15px 15px;*/
+  /*padding: 10px 0px 6px 15px;*/
+  /*smaller heading - no breaks*/
+  padding: 13px 0px 6px 15px;
+  background: #6A6A6A;
+  color: #fff;
+  margin: -20px -2px 0 -20px;
+  font-weight: 500;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+#t-wrapper .t-item .t-content h3 span {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+#t-wrapper .t-item .t-content:before {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  /*left: 45%;*/
+  left: 100.45%;
+  top: 20px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #6A6A6A;
+}
+
+#t-wrapper .t-item .t-content.right {
+  float: right;
+}
+
+#t-wrapper .t-item .t-content.right:before {
+  content: '';
+  /*right: 44.85%;*/
+  right: 100%;
+  left: inherit;
+  border-left: 0;
+  border-right: 8px solid #6A6A6A;
+}
+
+
 
