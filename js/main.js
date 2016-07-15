@@ -7,6 +7,8 @@ $(document).ready(function() {
           loop: !0
       });
 
+   
+
 // Function that adds "open" class to nav bar - utilizing staggerFromTo and staggerTo from Greensock
 // original: TweenMax.staggerFrom('.sections', 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 
@@ -32,6 +34,12 @@ $(document).ready(function() {
         TweenMax.staggerTo('.sections', 0.25, {opacity:0, x:-25, ease:Back.easeIn}, 0.05);
       }
 
+
+      // Heres the counter
+      $(".count").countTo()
+
+
+
 // Progress bar fill animation 
       // if($(window).scrollTop()>10) {
       //   $(".progress-bar").each(function(){
@@ -41,10 +49,24 @@ $(document).ready(function() {
       // }
   });
 
+  
 
+
+// function to check if element is in viewport
+  // function isScrollToWindow(elem)
+  // {
+  //     var docViewTop = $(window).scrollTop();
+  //     var docViewBottom = docViewTop + $(window).height();
+
+  //     var elemTop = $(elem).offset().top;
+  //     var elemBottom = elemTop + $(elem).height();
+
+  //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  // }
 
 
 
 });
+
 
 
