@@ -551,6 +551,12 @@ button.trigger:focus {
   width: 100%;
 }
 
+.bg-dark-grey {
+  background-color: #555;
+  width: 100%;
+
+}
+
 /*PROGRESS BARS*/
 /*-------------*/
 
@@ -637,6 +643,10 @@ button.trigger:focus {
   left: 50%;
   top: 0;
   position: absolute;
+
+  /*With Hexagon*/
+  /*width:5px;*/
+  /*left:49.97%*/
 }
 
 #t-wrapper:after {
@@ -651,7 +661,8 @@ button.trigger:focus {
   position: relative;
 }
 
-#t-wrapper .t-item .t-icon {
+/*Creates the circle icon for the SVG*/
+/*#t-wrapper .t-item .t-icon {
   background: #6A6A6A;
   width: 50px;
   height: 50px;
@@ -664,13 +675,48 @@ button.trigger:focus {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+}*/
+
+/*Creates Hexagon*/
+#t-wrapper .t-item .t-icon {
+  top:-3px;
+  left:48.2%;
+  position: absolute;
+  width: 50px; 
+  height: 29.09px;
+  background-color: #6A6A6A;
+  margin: 14.43px 0;
 }
+
+#t-wrapper .t-item .t-icon:before,
+#t-wrapper .t-item .t-icon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+#t-wrapper .t-item .t-icon:before {
+  bottom: 100%;
+  border-bottom: 14.43px solid #6A6A6A;
+} 
+
+#t-wrapper .t-item .t-icon:after {
+  top: 100%;
+  width: 0;
+  border-top: 14.43px solid #6A6A6A;
+} 
 
 /*handles svg*/
 #t-wrapper .t-item .t-icon svg {
   position: relative;
-  top:10px;
+  /*top:10px;*/
   left:10px;
+  /*Hexagon*/
+  top:-1px;
+
 }
 
 #t-wrapper .t-item .t-content {
@@ -742,5 +788,21 @@ button.trigger:focus {
   border-right: 8px solid #6A6A6A;
 }
 
+
+/*Footer*/
+/*------*/
+
+#footer {
+  position: absolute;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+#footer p {
+  color: #fff;
+  font-family: 'Lato';
+  padding-top: 5px;
+}
 
 
