@@ -552,19 +552,11 @@ button.trigger:focus {
 }
 
 .bg-dark-grey {
-<<<<<<< HEAD
   background-color: #555;
   width: 100%;
 
 }
 
-=======
-  background: #555;
-  width: 100%;
-}
-
-
->>>>>>> master
 /*PROGRESS BARS*/
 /*-------------*/
 
