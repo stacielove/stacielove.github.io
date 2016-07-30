@@ -434,6 +434,7 @@ button.trigger:focus {
   /*padding-bottom: 0;*/
   -webkit-transform: translateY(-50px);
   transform: translateY(-50px);
+
 }
 
 .portfolio-slide.modify .title h1, .portfolio-slide.modify .title h2 {
@@ -501,13 +502,34 @@ button.trigger:focus {
   transform: translateY(0);
 }
 
+/*SCROLLY FULL PAGE AND CUSTOM BG*/
+
+.full-pg {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
 #about {
   padding-left: 4em;
 }
 
-#services .row {
-  padding: 3em 0;
+#projects {
+  background-color: #efefef;
 }
+
+#timeline {
+  overflow-y: auto;
+}
+
+#contact {
+  background-color: #f9f9f9;
+}
+
+/*#services .row {
+  padding: 3em 0;
+}*/
 
 /* TRANSITION DELAYS */
 /*-------------------*/
@@ -640,7 +662,8 @@ button.trigger:focus {
   width: 3px;
   height: 100%;
   background: #6A6A6A;
-  left: 50%;
+  /*left: 50%;*/
+  left:50.33%;
   top: 0;
   position: absolute;
 
@@ -795,7 +818,6 @@ button.trigger:focus {
 #footer {
   position: absolute;
   padding: 15px;
-  width: 80%;
   text-align: center;
 }
 

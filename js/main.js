@@ -35,12 +35,24 @@ $(document).ready(function() {
       }
 
 
-      // Heres the counter
-      $(".count").countTo()
+      // Counter
+      // $(".count").countTo()
 
+      // Scroll page transition
+      // $.scrollify({
+      //   section : ".scrolly",
+      //   sectionName : "section-name",
+      //   interstitialSection : "#landing",
+      //   easing: "easeOutExpo",
+      //   scrollSpeed: 1000,
+      //   offset : 0,
+      //   scrollbars: true,
+      //   standardScrollElements: "#landing",
+      //   setHeights: true,
+      //   overflowScroll: true
+      // });
 
-
-// Progress bar fill animation 
+      // Progress bar fill animation 
       // if($(window).scrollTop()>10) {
       //   $(".progress-bar").each(function(){
       //     each_bar_width = $(this).attr('aria-valuenow');
