@@ -185,18 +185,164 @@
        
 
         <!-- Project Section -->
-        <div id="project" class="full-pg bg-grey scrolly" data-section-name="project-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10">
-                <h2>Picture of project goes here</h2>
+        <div id="projects" class="full-pg  scrolly" data-section-name="project-section">
+
+    <div class="container">
+      <div id="left-pane" class="col-md-8">
+        <ul class="proj-imgs col-md-12">
+          <li class="proj-img active"><img src="img/browser1.png"></li>
+          <li class="proj-img"><img src="img/browser2.png"></li>
+          <li class="proj-img"><img src="img/browser3.png"></li>
+        </ul>
+      </div>
+      <!--  proj-description -->
+      <div id="right-pane" class="col-md-4">
+        <div class="row" id="proj-nav">
+
+              <div class="col-md-3 text-left">
+              <button class="btn" id="previous"><i class="glyphicon glyphicon-chevron-left"></i></button>
               </div>
-              <div class="col-md-2">
-                <h2>Projects</h2>
-                <p>Need to create this as a jumbotron?</p>
+              <div class="col-md-6 text-center">
+                <ul class="proj-titles text-center">
+                  <li class="proj-title active"><h3>Man Man Van</h3></li>
+                  <li class="proj-title"><h3>Sequoia</h3></li>
+                  <li class="proj-title"><h3>Road Trip</h3></li>
+                </ul>
               </div>
-            </div>
+              <div class="col-md-3 text-right">
+              <button class="btn" id="next"><i class="glyphicon glyphicon-chevron-right"></i></button>
+              </div>
+ 
+        </div>
+
+        <div class="row" id="proj-description">
+          <div class="col-md-12">
+            <ul class="proj-items">
+              <li class="proj-item active">
+                <div class="proj-content">
+                  <h4>description</h4>
+                  <p>by Jesse Morrow (Man man van: two guys, one van). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna ipsum, ultrices eu enim vitae, maximus interdum ex. Vivamus in tortor sed nunc gravida tincidunt. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam orci leo, pulvinar id dignissim nec, sagittis faucibus nunc. Sed mollis euismod nisl eu mollis. Etiam tincidunt tortor blandit sapien lacinia dignissim id sed lorem. Mauris venenatis arcu nec turpis finibus, vel aliquam quam viverra.</p>
+                </div>
+                <div class="proj-stats">
+                  <h4>tech used</h4>
+                  <!-- HOW DO I GET USERS TO HOVER OVER THE ARCS?  -->
+                  <div id="diagram-van"></div>
+                  <div class="get-van no-disp">
+                    <div class="arc">
+                      <span class="text">jQuery</span>
+                      <input type="hidden" class="percent" value="95" />
+                      <input type="hidden" class="color" value="#354242" />
+                    </div>
+                    <div class="arc">
+
+                      <span class="text">CSS3</span>
+                      <input type="hidden" class="percent" value="90" />
+                      <input type="hidden" class="color" value="#ACEBAE" />
+                    </div>
+                    <div class="arc">
+                      <span class="text">HTML5</span>
+                      <input type="hidden" class="percent" value="80" />
+                      <input type="hidden" class="color" value="#FFFF9D" />
+
+                    </div>
+                    <div class="arc">
+                      <span class="text">PHP</span>
+                      <input type="hidden" class="percent" value="53" />
+                      <input type="hidden" class="color" value="#C9DE55" />
+                    </div>
+                    <div class="arc">
+                      <span class="text">MySQL</span>
+                      <input type="hidden" class="percent" value="30" />
+                      <input type="hidden" class="color" value="#7D9100" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="proj-item">
+                <div class="proj-content">
+                <h4>description</h4>
+                <p> by Chaney Swiney (Sequoia: find your park: part siz). Nam at placerat elit, ut ultrices dolor. Cras ut interdum ex. Nam lobortis diam ut tortor pellentesque, eget finibus massa consequat. Fusce ut pellentesque nisi, at fringilla justo. Aenean malesuada lorem quis varius commodo. Aenean dictum massa vel dui malesuada, sed lobortis felis cursus. Pellentesque eu rutrum velit</p>
+              </div>
+              <div class="proj-stats">
+                <h4>tech</h4>
+                <!-- <p> CAT 2 Here's something about this</p> -->
+                <div id="diagram-seq"></div>
+                <div class="get-seq no-disp">
+                  <div class="arc">
+                    <span class="text">jQuery</span>
+                    <input type="hidden" class="percent" value="46" />
+                    <input type="hidden" class="color" value="#2E0927" />
+                  </div>
+                  <div class="arc">
+
+                    <span class="text">CSS3</span>
+                    <input type="hidden" class="percent" value="87" />
+                    <input type="hidden" class="color" value="#D90000" />
+                  </div>
+                  <div class="arc">
+                    <span class="text">HTML5</span>
+                    <input type="hidden" class="percent" value="72" />
+                    <input type="hidden" class="color" value="#FF2D00" />
+
+                  </div>
+                  <div class="arc">
+                    <span class="text">PHP</span>
+                    <input type="hidden" class="percent" value="49" />
+                    <input type="hidden" class="color" value="#FF8C00" />
+                  </div>
+                  <div class="arc">
+                    <span class="text">MySQL</span>
+                    <input type="hidden" class="percent" value="21" />
+                    <input type="hidden" class="color" value="#04756F" />
+                  </div>
+                </div>
+              </div>
+              </li>
+              <li class="proj-item">
+                <div class="proj-content">
+                <h4>description</h4>
+                <p> by Matthew Novak (The uncanadian road trip: dealing with disappointment as injuries get in the way of adventure). Sed dapibus et ligula pharetra tempor. Fusce scelerisque tristique augue, a dapibus ante. Ut non justo tempor, tristique est non, laoreet est. Morbi sagittis pharetra mauris eu eleifend. Curabitur mattis mauris sit amet magna tempus, a pharetra lectus suscipit. Sed nec purus turpis. In hac habitasse platea dictumst. Ut vel feugiat risus.</p>
+              </div>
+              <div class="proj-stats">
+                <h4>tech</h4>
+                <div id="diagram-roa"></div>
+                <div class="get-roa no-disp">
+                  <div class="arc">
+                    <span class="text">jQuery</span>
+                    <input type="hidden" class="percent" value="52" />
+                    <input type="hidden" class="color" value="#00A388" />
+                  </div>
+                  <div class="arc">
+
+                    <span class="text">CSS3</span>
+                    <input type="hidden" class="percent" value="64" />
+                    <input type="hidden" class="color" value="#79BD8F" />
+                  </div>
+                  <div class="arc">
+                    <span class="text">HTML5</span>
+                    <input type="hidden" class="percent" value="72" />
+                    <input type="hidden" class="color" value="#BEEB9F" />
+
+                  </div>
+                  <div class="arc">
+                    <span class="text">Meteor.JS</span>
+                    <input type="hidden" class="percent" value="36" />
+                    <input type="hidden" class="color" value="#FFFF9D" />
+                  </div>
+                                    <div class="arc">
+                    <span class="text">PHP</span>
+                    <input type="hidden" class="percent" value="49" />
+                    <input type="hidden" class="color" value="#FF8C00" />
+                  </div>
+
+                </div>
+              </div>
+              </li>
+            </ul>
           </div>
+      </div>
+      </div><!--end of right pane -->
+    </div><!--end of container -->
         </div>
             <!-- </div> -->
           <!-- </div> -->
@@ -381,6 +527,7 @@
     <script src="js/typed.js"></script>
     <script src="js/jquery.appear.js"></script>
     <script src="js/jquery.countTo.min.js"></script>
+    <script src="js/raphael.min.js"></script>
     <script src="js/scrollify.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
